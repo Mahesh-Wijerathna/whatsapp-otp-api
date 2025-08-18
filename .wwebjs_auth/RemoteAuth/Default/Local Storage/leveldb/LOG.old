@@ -1,2 +1,2 @@
-2025/07/30-06:24:38.419 32d0 Creating DB G:\FYP\_09_working\whatsapp-otp-api\.wwebjs_auth\RemoteAuth\Default\Local Storage\leveldb since it was missing.
-2025/07/30-06:24:38.657 32d0 Reusing MANIFEST G:\FYP\_09_working\whatsapp-otp-api\.wwebjs_auth\RemoteAuth\Default\Local Storage\leveldb/MANIFEST-000001
+2025/08/17-11:27:58.127 46c4 Creating DB /opt/render/project/src/.wwebjs_auth/RemoteAuth/Default/Local Storage/leveldb since it was missing.
+2025/08/17-11:27:58.139 46c4 Reusing MANIFEST /opt/render/project/src/.wwebjs_auth/RemoteAuth/Default/Local Storage/leveldb/MANIFEST-000001
