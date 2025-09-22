@@ -81,7 +81,7 @@ app.post('/send_otp', async (req, res) => {
         const chatId = phoneNumber.includes('@c.us') ? phoneNumber : `${phoneNumber}@c.us`;
         
         // Send message
-        await client.sendMessage(chatId, `Your OTP is: ${otp}`);
+        await client.sendMessage(chatId, `${otp}`);
         
         res.json({ success: true, message: 'OTP sent successfully' });
     } catch (error) {
