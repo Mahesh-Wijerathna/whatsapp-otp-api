@@ -13,7 +13,7 @@ app.get('/test', (req, res) => {
 // API endpoint to send OTP
 app.post('/send_otp', async (req, res) => {
     // console.log('Received /send_otp request:', req.body);
-   
+    
     
     const { phoneNumber, otp } = req.body;
     
@@ -21,33 +21,35 @@ app.post('/send_otp', async (req, res) => {
         return res.status(400).json({ success: false, message: 'Phone number and OTP are required' });
     }
 
-    try {
-        const options = {
-  method: 'POST',
-  url: 'https://gate.whapi.cloud/messages/text',
-  headers: {
-    accept: 'application/json',
-    'content-type': 'application/json',
-    authorization: 'Bearer ' + process.env.WHAPI_TOKEN
-  },
-  data: {
-    typing_time: 0,
-    to: phoneNumber, // International format (e.g., 15550109999)
-    body: `${otp}`
-  }
-};
+    console.log(`Sending OTP ${otp} to phone number ${phoneNumber}`);
+
+            // try {
+            //         const options = {
+            // method: 'POST',
+            // url: 'https://gate.whapi.cloud/messages/text',
+            // headers: {
+            //     accept: 'application/json',
+            //     'content-type': 'application/json',
+            //     authorization: 'Bearer ' + process.env.WHAPI_TOKEN
+            // },
+            // data: {
+            //     typing_time: 0,
+            //     to: phoneNumber, // International format (e.g., 15550109999)
+            //     body: `${otp}`
+            // }
+            // };
         
-       
-const response = await axios.request(options);
-        // console.log(response.data);
-       
+        
+            // const response = await axios.request(options);
+            //     // console.log(response.data);
+            
 
-    } catch (error) {
+            // } catch (error) {
 
-        // console.error('Error sending OTP:', error);
+            //     // console.error('Error sending OTP:', error);
 
-        res.status(500).json({ success: false, message: 'Failed to send OTP', error: error.message });
-    }
+            //     res.status(500).json({ success: false, message: 'Failed to send OTP', error: error.message });
+            // }
 
     res.json({ success: true, message: 'OTP sent successfully' });
 
