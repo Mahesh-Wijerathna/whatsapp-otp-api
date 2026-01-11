@@ -1,9 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const { Client, RemoteAuth } = require('whatsapp-web.js');
-const { MongoStore } = require('wwebjs-mongo');
-const mongoose = require('mongoose');
+const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const app = express();
@@ -12,21 +10,12 @@ app.use(bodyParser.json());
 let client;
 let isWhatsAppReady = false;
 
-// Initialize MongoDB and WhatsApp client
+// Initialize WhatsApp client
 async function initializeApp() {
     try {
-        // MongoDB connection
-        await mongoose.connect('mongodb+srv://SoftwareProject:SoftwareProject@cluster0.r0hwfhg.mongodb.net/');
-        console.log('Connected to MongoDB');
-
-        const store = new MongoStore({ mongoose: mongoose });
-
         // WhatsApp client initialization
         client = new Client({
-            authStrategy: new RemoteAuth({
-                store: store,
-                backupSyncIntervalMs: 300000
-            }),
+            authStrategy: new LocalAuth(),
             puppeteer: {
                 headless: true,
                 args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -51,11 +40,12 @@ async function initializeApp() {
             isWhatsAppReady = true;
         });
 
-        client.on('remote_session_saved', () => {
-            console.log('Remote session saved');
+        client.on('disconnected', (reason) => {
+            console.log('Client was disconnected', reason);
         });
 
-        client.initialize();
+        await client.initialize();
+        console.log('WhatsApp client initialized');
     } catch (error) {
         console.error('Initialization error:', error);
         process.exit(1);
@@ -93,7 +83,16 @@ app.post('/send_otp', async (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     initializeApp();
+});
+
+// Handle uncaught errors
+process.on('uncaughtException', (error) => {
+    console.error('Uncaught Exception:', error);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
