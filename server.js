@@ -56,6 +56,7 @@ app.get('/test', (req, res) => {
 });
 // API endpoint to send OTP
 app.post('/send_otp', async (req, res) => {
+    console.log('Received /send_otp request:', req.body);
     if (!isWhatsAppReady) {
         return res.status(503).json({ success: false, message: 'WhatsApp client is not ready yet' });
     }
