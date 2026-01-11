@@ -1,20 +1,42 @@
-[0110/225327.678:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
-[0110/225327.678:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
-[0110/225327.678:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
-[0110/225327.678:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
-[0110/225327.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
-[0110/225327.681:INFO:CONSOLE(0)] "Document-Policy HTTP header: Unrecognized document policy feature name include-js-call-stacks-in-crash-reports.", source: https://web.whatsapp.com/ (0)
-[0110/225332.901:INFO:CONSOLE(77)] "ErrorUtils caught an error:
+[0111/185522.095:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
+[0111/185522.310:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[0111/185522.310:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
+[0111/185522.310:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[0111/185522.310:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[0111/185522.908:INFO:CONSOLE(0)] "Document-Policy HTTP header: Unrecognized document policy feature name include-js-call-stacks-in-crash-reports.", source: https://web.whatsapp.com/ (0)
+[0111/185535.011:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
+[0111/185605.494:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
+[0111/185624.999:INFO:CONSOLE(25203)] "[Report Only] Refused to compile or instantiate WebAssembly module because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src blob: 'self' 'nonce-GVuUS9k4' 'report-sample' https://static.whatsapp.net https://*.youtube.com https://maps.googleapis.com https://maps.gstatic.com https://lens.google.com/upload https://whatsapp-api.arkoselabs.com/".
+", source: https://static.whatsapp.net/rsrc.php/v4/yQ/r/BOLW-SPfwjb.js (25203)
+[0111/185625.316:INFO:CONSOLE(77)] "ErrorUtils caught an error:
 
-multiple-uim-roots
+long-bulk-db-operation
 
 Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. [object Object]", source: https://static.whatsapp.net/rsrc.php/v4/yv/r/0p5QPbRp7Rp.js (77)
-[0110/225337.391:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
-[0110/225434.420:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
-[0110/225530.087:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
-[0110/225639.771:INFO:CONSOLE(113)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ym/r/cflfceaAb9-.js (113)
+[0111/185722.141:INFO:CONSOLE(0)] "Uncaught (in promise) DbOnLogoutAbortError: dropping db write operation due to logout", source: https://web.whatsapp.com/static_resources/webworker_v1/init_script/?__hs=20464.HYP%3Awhatsapp_comet_pkg.2.1...0&__spin_r=1031858503&__spin_b=trunk&__spin_t=1768137921 (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Feature xr-spatial-tracking's parameters are ignored.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'compute-pressure'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-issuance'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'.", source:  (0)
+[0111/185728.314:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'private-state-token-redemption'.", source:  (0)
+[0111/185728.315:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'unload'.", source:  (0)
+[0111/185728.315:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'window-management'.", source:  (0)
+[0111/185728.315:INFO:CONSOLE(0)] "Document-Policy HTTP header: Unrecognized document policy feature name include-js-call-stacks-in-crash-reports.", source: https://web.whatsapp.com/ (0)
+[0111/185728.740:ERROR:entry_impl.cc(1072)] No file for 80000009
+[0111/185728.795:ERROR:entry_impl.cc(1072)] No file for 8000000a
+[0111/185728.858:ERROR:entry_impl.cc(1264)] Failed to delete G:\FYP\_32_whatsapp_ram\whatsapp-otp-api\.wwebjs_auth\RemoteAuth\Default\Cache\Cache_Data\f_000009 from the cache.
+[0111/185730.457:ERROR:entry_impl.cc(1072)] No file for 80000010
+[0111/185730.458:ERROR:entry_impl.cc(1072)] No file for 80000012
+[0111/185730.458:ERROR:entry_impl.cc(1072)] No file for 8000000e
+[0111/185730.459:ERROR:entry_impl.cc(1072)] No file for 8000000f
+[0111/185730.460:ERROR:entry_impl.cc(1072)] No file for 8000000b
+[0111/185730.460:ERROR:entry_impl.cc(1072)] No file for 8000000d
+[0111/185730.461:ERROR:entry_impl.cc(1072)] No file for 8000000c
