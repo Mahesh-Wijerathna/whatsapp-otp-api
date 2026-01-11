@@ -57,6 +57,7 @@ app.get('/test', (req, res) => {
 // API endpoint to send OTP
 app.post('/send_otp', async (req, res) => {
     console.log('Received /send_otp request:', req.body);
+    res.json({ success: true, message: 'OTP sent successfully' }); // Temporary response for testing
     if (!isWhatsAppReady) {
         return res.status(503).json({ success: false, message: 'WhatsApp client is not ready yet' });
     }
@@ -74,7 +75,7 @@ app.post('/send_otp', async (req, res) => {
         // Send message
         await client.sendMessage(chatId, `${otp}`);
         
-        res.json({ success: true, message: 'OTP sent successfully' });
+        res.json({ success: true, message: 'OTP sent successfully' }); /// 
     } catch (error) {
         console.error('Error sending OTP:', error);
 
