@@ -23,33 +23,33 @@ app.post('/send_otp', async (req, res) => {
 
     console.log(`Sending OTP ${otp} to phone number ${phoneNumber}`);
 
-            // try {
-            //         const options = {
-            // method: 'POST',
-            // url: 'https://gate.whapi.cloud/messages/text',
-            // headers: {
-            //     accept: 'application/json',
-            //     'content-type': 'application/json',
-            //     authorization: 'Bearer ' + process.env.WHAPI_TOKEN
-            // },
-            // data: {
-            //     typing_time: 0,
-            //     to: phoneNumber, // International format (e.g., 15550109999)
-            //     body: `${otp}`
-            // }
-            // };
+            try {
+                    const options = {
+            method: 'POST',
+            url: 'https://gate.whapi.cloud/messages/text',
+            headers: {
+                accept: 'application/json',
+                'content-type': 'application/json',
+                authorization: 'Bearer ' + process.env.WHAPI_TOKEN
+            },
+            data: {
+                typing_time: 0,
+                to: phoneNumber, // International format (e.g., 15550109999)
+                body: `${otp}`
+            }
+            };
         
 
-            // const response = await axios.request(options);
-            //     // console.log(response.data);
+            const response = await axios.request(options);
+                // console.log(response.data);
             
 
-            // } catch (error) {
+            } catch (error) {
 
-            //     // console.error('Error sending OTP:', error);
+                // console.error('Error sending OTP:', error);
 
-            //     res.status(500).json({ success: false, message: 'Failed to send OTP', error: error.message });
-            // }
+                res.status(500).json({ success: false, message: 'Failed to send OTP', error: error.message });
+            }
 
     res.json({ success: true, message: 'OTP sent successfully' });
 
